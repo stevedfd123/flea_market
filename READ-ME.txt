@@ -1,0 +1,9 @@
+CEYLON FLEA MARKET — INTERACTIVE DEMO
+
+1. Extract this ZIP file.
+2. Double-click index.html to open it in Chrome, Edge or another modern browser.
+3. The site starts on Market Days. Click the Ceylon logo to see the homepage, or use the menu to explore.
+
+This is a standalone demonstration, not the live server. Test accounts, uploaded photos and other changes disappear when you reload the page. There is no live Facebook sync or payment processing.
+
+To try the organiser tools, choose “Organiser: add photos” and enter the demo password shown on the sign-in page.
