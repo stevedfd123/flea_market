@@ -1,0 +1,38 @@
+Ceylon Flea Market — landing page (index.html)
+==============================================
+
+Run:   python3 serve.py 8000      then open the preview for port 8000
+File:  index.html                one self-contained page (no build step needed)
+
+What it is
+----------
+The old pitch-letter layout, re-purposed as the flea-market landing page:
+
+  masthead      Ceylon fleamarket mark (flower logo + wordmark)
+  hero          "Good things / come around / again." + two buttons
+  globe         three.js globe of 46 curved photo tiles; drag to spin,
+                scroll to nudge it, click a photo -> it explodes into
+                shards, dissolves, and the photo opens enlarged
+  stalls row    the sliding row of 8 photo cards (one every 2.4s), click a
+                card -> same explode + dissolve + enlarge
+  sign-off      "come for the treasure hunting" + two pill buttons + footer
+
+Everything from the original letter was removed: the "For Noor" framing, the
+studio text, the pull-quote, the signature and the name block. All copy is
+market copy.
+
+Sources
+-------
+  market-cells/m1.jpg … m8.jpg   the eight market photos (inlined as base64
+                                 into index.html by tools/build_landing.py)
+  vendor/three.module.js         three.js 0.160.0 (local, no CDN at runtime)
+  tools/build_landing.py         the one-off build that produced index.html
+
+Notes
+-----
+* The page needs no network access for images: all eight photos are embedded
+  as data URIs (~1.1 MB base64). Google Fonts (DM Sans / DM Serif Display
+  fallback order) is the only optional remote request.
+* If Google Fonts is blocked the page falls back to system-ui; layout holds.
+* Re-running tools/build_landing.py rebuilds index.html from noor-branded
+  sources and would undo hand edits — it was used once, for the first pass.
